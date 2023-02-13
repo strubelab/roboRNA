@@ -1,4 +1,4 @@
-## scripts exported from Tecan Evoware
+# scripts exported from Tecan Evoware
 
 The roboRNA protocol is composed of one main script which is in turn calling several subroutines. In this directory you find the export / import files created with the Tecan Import/Export tool.
 
