@@ -10,6 +10,17 @@ The roboRNA protocol is composed of one main script which is in turn calling sev
 
   * separate exports of the complete set of MCA tip handling scripts -- see below
 
+### Requirements
+
+* Tecan Evo200 robot with ROMA (plate moving) and MCA96 (multichannel pipetting) arm
+* on-board plate shaker (in our case a original Tecan shaker with two positions, only one needed)
+* on-board plate heating position for drying after Ethanol washes of beads
+* plate hotel space, in our case plates are stored in standard plate hotel "towers" at the back of the deck
+* deepwell plates -- recommended are Greiner square well plates with round bottom for optimal mixing during shaking
+* regular 96-well plates -- round well bottom recommended for optimal mixing
+* matching plate lids (we use universal lids for deepwell plates)
+* sterile 200 uL MCA tip racks in stacks of 8 (we use Axygen, clear)
+* reagents and beads as described in our paper
 
 ### Installation
 
