@@ -1,4 +1,37 @@
 ## scripts exported from Tecan Evoware
 
+The roboRNA protocol is composed of one main script which is in turn calling several subroutines. In this directory you find the export / import files created with the Tecan Import/Export tool.
+
+* `roboRNA_everything.exd` -- the complete export of labware, carriers, liquid classes, ROMA vectors and sub-scripts. (Note that we removed some carriers and labware that is not used by the script but referenced in the deck layout).
+
+* `roboRNA_partial_*` -- separate exports of carriers, labware etc (including unused not found in the above everything export)
+
+* `subroutines` folder:
+
+  * separate exports of the complete set of MCA tip handling scripts -- see below
 
 
+### Installation
+
+You will need to fine-tune and adapt these scripts to your own system. In particular you will probably use different carriers and labware. Moreover, all calls to subroutines need to be corrected to the actual file path where the routines end up in your own Evoware installation.
+
+The following strategy may work:
+
+1) Open roboRNA_everything.exd in the Tecan Import/Export tool.
+(2) Select everything for import
+  - note that imported liquid classes cannot later be removed so, optionally, first exclude them from the import and see whether you want to replace any of the liquid classes in the script by liquid classes already existing in your system
+(3) Import, this will place the script files into your default Evoware scripts folder.
+(4) Create a sub-folder `subroutines` in your `Evoware\database\scripts` folder.
+(5) Move all scripts except the main RNAextraction script to that folder
+(6) Open the main script in Evoware Standard
+(7) Reconnect subroutine calls to their new location in your file system:
+  - edit all calls to "shakeandwait", "fetch_tipcolumns", "drop_tipcolumns", and the MCA init or MCA reset scripts
+  - open one by one all of the subroutine scripts in MCA_tips and look for subroutine calls within them, adapt file location
+  - save all scripts
+
+
+### MCA Tip Handling
+
+We have implemented a quite elaborate set of subroutines for the automatic handling of stacked MCA96 tips. Between 2 and 12 columns of tips can be fetched from the `MCA source` position with the `fetch_columns` subroutine and will then be discarded to the `MCA dest` position with the `drop_columns` subroutine. Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. Those who want to inspect this tip handling in isolation, can import the two files from `subroutines/MCA_tips`. Note that Evoware does not support relative imports of subroutines. The file path to the subroutine is hard-coded into the calling method. In our case this was `C:\EvoProjects\subroutines\MCA_tips\...`. You will have to adapt all subroutine calls in the main script and in several subroutines in order to make things work on your own system.
+ 
+Our script assumes that your MCA pipetting head can pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. In our experience, fine-tuning the MCA vector definitions prevented that from happening.
