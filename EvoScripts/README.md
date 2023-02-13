@@ -17,17 +17,17 @@ You will need to fine-tune and adapt these scripts to your own system. In partic
 
 The following strategy may work:
 
-1) Open roboRNA_everything.exd in the Tecan Import/Export tool.
-(2) Select everything for import
-  - note that imported liquid classes cannot later be removed so, optionally, first exclude them from the import and see whether you want to replace any of the liquid classes in the script by liquid classes already existing in your system
-(3) Import, this will place the script files into your default Evoware scripts folder.
-(4) Create a sub-folder `subroutines` in your `Evoware\database\scripts` folder.
-(5) Move all scripts except the main RNAextraction script to that folder
-(6) Open the main script in Evoware Standard
-(7) Reconnect subroutine calls to their new location in your file system:
-  - edit all calls to "shakeandwait", "fetch_tipcolumns", "drop_tipcolumns", and the MCA init or MCA reset scripts
-  - open one by one all of the subroutine scripts in MCA_tips and look for subroutine calls within them, adapt file location
-  - save all scripts
+1. Open roboRNA_everything.exd in the Tecan Import/Export tool.
+2. Select everything for import
+   - note that imported liquid classes cannot later be removed so, optionally, first exclude them from the import and see whether you want to replace any of the liquid classes in the script by liquid classes already existing in your system
+3. Import, this will place the script files into your default Evoware scripts folder.
+4. Create a sub-folder `subroutines` in your `Evoware\database\scripts` folder.
+5. Move all scripts except the main RNAextraction script to that folder
+6. Open the main script in Evoware Standard
+7. Reconnect subroutine calls to their new location in your file system:
+   - edit all calls to "shakeandwait", "fetch_tipcolumns", "drop_tipcolumns", and the MCA init or MCA reset scripts
+   - open one by one all of the subroutine scripts in MCA_tips and look for subroutine calls within them, adapt file location
+   - save all scripts
 
 
 ### MCA Tip Handling
