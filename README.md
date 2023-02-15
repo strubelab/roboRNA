@@ -1,10 +1,9 @@
 # Automated RNA extraction for SARS-CoV-2 diagnostics
 Implemented by Raik Grünberg, Francisco Javier Guzmán & Gerardo Ramos-Mandujano
 
-## Short workflow overview
-(variable speedup of motions)
 https://user-images.githubusercontent.com/1862877/219083273-424a2abc-3152-401e-a831-5861e001d930.mp4
-(Video edited by Huma Kurrham)
+
+(Most scenes sped up, Video edited by Huma Kurrham)
 
 ## Robot deck layout
 ![Deck Layout](./images/deck_annotated.png)
