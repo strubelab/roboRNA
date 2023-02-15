@@ -32,7 +32,9 @@ This is how it looks:
 
 https://user-images.githubusercontent.com/1862877/219094383-5f3ac4c9-0e8b-4bbb-abd5-74414654c334.mp4
 
-Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. Those who want to inspect this tip handling in isolation, can import the two files from `subroutines/MCA_tips`. You will have to adapt all subroutine calls in the main script and in several subroutines in order to make things work on your own system.
- 
-Our script assumes that your MCA pipetting head can pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. Fine-tune the MCA vector definition on the MCA tip rack carrier to prevent that from happening.
+Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. The tip handling subroutines can be imported separately from `EvoScripts/subroutines/MCA_tips`. 
+
+Notes:
+  - You will have to adapt all subroutine calls in the main script and in several subroutines to the folder where these scripts end up on your system. 
+  - The MCA pipetting head needs to be able to pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. Fine-tune the MCA vector definition on the MCA tip rack carrier to prevent that from happening.
 
