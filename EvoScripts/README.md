@@ -47,7 +47,7 @@ Tecan Evoware has built-in tip management for their normal 8-span LiHa tips but 
 
 * fetch between 2 and 12 columns of tips -- no need to specify positions or stacks
 * tips are always fetched from the same (non-stacked) `MCA source` position
-* tips are always dropeed to the same (non-stacked) `MCA dest` position
+* tips are always dropped to the same (non-stacked) `MCA dest` position
 * state of tips and stacks is remembered also between runs (stored on disc)
 * automatic rotating-in of a new tip rack whenever needed -- no need to hard-code any of it
 * startup methods to let user modify or reset tip and stack counts
@@ -61,4 +61,4 @@ https://user-images.githubusercontent.com/1862877/219094383-5f3ac4c9-0e8b-4bbb-a
 
 Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. Those who want to inspect this tip handling in isolation, can import the two files from `subroutines/MCA_tips`. You will have to adapt all subroutine calls in the main script and in several subroutines in order to make things work on your own system.
  
-Our script assumes that your MCA pipetting head can pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. In our experience, fine-tuning the MCA vector definitions prevented that from happening.
+Our script assumes that your MCA pipetting head can pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. Fine-tune the MCA vector definition on the MCA tip rack carrier to prevent that from happening.
