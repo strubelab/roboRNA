@@ -22,6 +22,27 @@ The roboRNA protocol is composed of one main script which is in turn calling sev
 * sterile 200 uL MCA tip racks in stacks of 8 (we use Axygen, clear)
 * reagents and beads as described in our paper
 
+
+### Automatted MCA tip rotation & handling
+
+Tecan Evoware has built-in tip management for their normal 8-span LiHa tips but does not seem to offer anything comparable for 96-channel MCA tip racks. So we implemented our own automated handling of stacked MCA tips. Main features:
+
+* fetch between 2 and 12 columns of tips -- no need to specify positions or stacks
+* tips are always fetched from the same (non-stacked) `MCA source` position
+* tips are always dropped to the same (non-stacked) `MCA dest` position
+* state of tips and stacks is remembered also between runs (stored on disc)
+* automatic rotating-in of a new tip rack whenever needed -- no need to hard-code any of it
+* startup methods to let user modify or reset tip and stack counts
+
+This is how it looks:
+
+
+https://user-images.githubusercontent.com/1862877/219094383-5f3ac4c9-0e8b-4bbb-abd5-74414654c334.mp4
+
+Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. Those who want to inspect this tip handling in isolation, can import the two files from `subroutines/MCA_tips`. You will have to adapt all subroutine calls in the main script and in several subroutines in order to make things work on your own system.
+ 
+Our script assumes that your MCA pipetting head can pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. Fine-tune the MCA vector definition on the MCA tip rack carrier to prevent that from happening.
+
 ### Installation
 
 You will need to fine-tune and adapt these scripts to your own system. In particular you will probably use different carriers and labware. Moreover, all calls to subroutines need to be corrected to the actual file path where the routines end up in your own Evoware installation.
@@ -41,24 +62,3 @@ The following strategy may work:
    - save all scripts
 
 
-### MCA Tip Handling
-
-Tecan Evoware has built-in tip management for their normal 8-span LiHa tips but does not seem to offer anything comparable for 96-channel MCA tip racks. So we implemented our own automated handling of stacked MCA tips. Main features:
-
-* fetch between 2 and 12 columns of tips -- no need to specify positions or stacks
-* tips are always fetched from the same (non-stacked) `MCA source` position
-* tips are always dropped to the same (non-stacked) `MCA dest` position
-* state of tips and stacks is remembered also between runs (stored on disc)
-* automatic rotating-in of a new tip rack whenever needed -- no need to hard-code any of it
-* startup methods to let user modify or reset tip and stack counts
-
-This is how it looks:
-
-
-https://user-images.githubusercontent.com/1862877/219094383-5f3ac4c9-0e8b-4bbb-abd5-74414654c334.mp4
-
-
-
-Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. Those who want to inspect this tip handling in isolation, can import the two files from `subroutines/MCA_tips`. You will have to adapt all subroutine calls in the main script and in several subroutines in order to make things work on your own system.
- 
-Our script assumes that your MCA pipetting head can pick up partial sets of tips. On our own instrument, we had to remove  plastic clamps protruding right and left of the MCA in order to enable this functionality. Removing the clamps creates a slight risk of the MCA picking up more than one tip stack. Fine-tune the MCA vector definition on the MCA tip rack carrier to prevent that from happening.
