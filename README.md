@@ -32,7 +32,7 @@ This is how it looks:
 
 https://user-images.githubusercontent.com/1862877/219094383-5f3ac4c9-0e8b-4bbb-abd5-74414654c334.mp4
 
-Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. The tip handling subroutines can be imported separately from `EvoScripts/subroutines/MCA_tips`. 
+Whenever the source position runs out of tips, a new tip rack will automatically be "rotated" in from a source stack and the rack with the used tips is stacked onto a waste stack. The tip handling subroutines can be imported separately from [EvoScripts/subroutines/MCA_tips](EvoScripts/subroutines/MCA_tips). 
 
 Notes:
   - You will have to adapt all subroutine calls in the main script and in several subroutines to the folder where these scripts end up on your system. 
