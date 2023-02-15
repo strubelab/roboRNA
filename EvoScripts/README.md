@@ -4,7 +4,7 @@ The roboRNA protocol is composed of one main script which is in turn calling sev
 
 * `roboRNA_everything.exd` -- the complete export of labware, carriers, liquid classes, ROMA vectors and sub-scripts. (we removed some carriers and labware that are not used by the script but referenced in the deck layout).
 
-* `roboRNA_partial_*` -- separate exports of carriers, labware etc (including unused not found in the above everything export)
+* `roboRNA_part_*` -- separate exports of carriers, labware etc (including unused not found in the above everything export)
 
 * `subroutines` folder:
 
