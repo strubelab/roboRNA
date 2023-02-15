@@ -1,7 +1,8 @@
 # Automated RNA extraction for SARS-CoV-2 diagnostics
-Implemented by Raik Grünberg, Francisco Javier Guzmán & Gerardo Ramos-Mandujano
-
-(King Abdullah University of Science and Technology)
+<p align=center>
+Implemented by Raik Grünberg, Francisco Javier Guzmán & Gerardo Ramos-Mandujano<br>
+King Abdullah University of Science and Technology
+</p>
 
 The automation script is based on in-house produced magnetic beads. Patient samples are provided in Trizol and are thus completely inactivated -- this makes the workflow safe for a regular biosafety level 1 environment. The script can process between 2 and 12 columns of patient samples (between 16 and 96 samples) at a time.
 
