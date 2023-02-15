@@ -25,7 +25,7 @@ The roboRNA protocol is composed of one main script which is in turn calling sev
 
 ### Installation
 
-You will need to fine-tune and adapt these scripts to your own system. In particular you will probably use different carriers and labware. Moreover, all calls to subroutines need to be corrected to the actual file path where the routines end up in your own Evoware installation.
+You will need to fine-tune and adapt these scripts to your own system. All calls to subroutines need to be corrected to the actual file path where the routines end up in your own Evoware installation.
 
 The following strategy may work:
 
