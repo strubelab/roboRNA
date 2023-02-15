@@ -4,7 +4,7 @@ Implemented by Raik Grünberg, Francisco Javier Guzmán & Gerardo Ramos-Mandujan
 King Abdullah University of Science and Technology
 </p>
 
-The automation script is based on in-house produced magnetic beads. Patient samples are provided in Trizol and are thus completely inactivated -- this makes the workflow safe for a regular biosafety level 1 environment. The script can process between 2 and 12 columns of patient samples (between 16 and 96 samples) at a time.
+The automation script is based on in-house produced magnetic beads. Patient samples are provided in Trizol and are thus completely inactivated -- this makes the workflow safe for a regular biosafety level 1 environment. The script can process between 2 and 12 columns of patient samples (between 16 and 96 samples) at a time. We here provide the export of the complete script including subroutines, labware, and carriers -- See [EvoScripts](EvoScripts).
 
 https://user-images.githubusercontent.com/1862877/219083273-424a2abc-3152-401e-a831-5861e001d930.mp4
 
