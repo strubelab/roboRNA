@@ -2,7 +2,7 @@
 
 The roboRNA protocol is composed of one main script which is in turn calling several subroutines. In this directory you find the export / import files created with the Tecan Import/Export tool.
 
-* `roboRNA_everything.exd` -- the complete export of labware, carriers, liquid classes, ROMA vectors and sub-scripts. (Note that we removed some carriers and labware that is not used by the script but referenced in the deck layout).
+* `roboRNA_everything.exd` -- the complete export of labware, carriers, liquid classes, ROMA vectors and sub-scripts. (we removed some carriers and labware that are not used by the script but referenced in the deck layout).
 
 * `roboRNA_partial_*` -- separate exports of carriers, labware etc (including unused not found in the above everything export)
 
