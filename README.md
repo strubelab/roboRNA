@@ -3,6 +3,8 @@ Ramos-Mandujano et al. supplemental materials
 
 ![Overview](./videos/workflow_overview.mp4)
 
+https://github.com/strubelab/roboRNA/blob/main/videos/workflow_overview.mp4
+
 ## Robot deck layout
 ![Deck Layout](./images/deck_annotated.png)
 View of the Evo200 liquid handling setup used at KAUST:
