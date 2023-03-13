@@ -10,6 +10,8 @@ https://user-images.githubusercontent.com/1862877/219083273-424a2abc-3152-401e-a
 
 (Most scenes sped up, Video edited by Huma Kurrham)
 
+Please see also [protocol_summary.pdf](./protocol_summary.pdf).
+
 ## Robot deck layout
 ![Deck Layout](./images/deck_annotated.png)
 Annotated view of the Tecan Evo200 setup used at KAUST:
